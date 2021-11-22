@@ -8,21 +8,34 @@ Ex:
 |________________________________________________|
 */
 
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include <string.h>
 
-void Ex4(char *str){
-	//Your codes here
-	
+void Ex4(char *str) {
+  // Your codes here
+  // Put into array
+  char *array[100];
+  int i = 0;
+  char *p = strtok(str, " ");
+  while (p != NULL) {
+    array[i] = p;
+    i++;
+    p = strtok(NULL, " ");
+  }
+  // Print out array as strings
+  for (int j = 0; j < i; j++) {
+    printf("%s ", array[j]);
+  }
+  printf("\n");
 }
 
 int main(int argc, char *argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
-	char *testcase = argv[1];
+  // testing variable, applying it to your algorithm for auto-evaluating
+  char *testcase = argv[1];
 
-	Ex4(testcase);
+  Ex4(testcase);
 
-	return 0;
+  return 0;
 }

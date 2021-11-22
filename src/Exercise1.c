@@ -16,7 +16,7 @@ char *parseBasicNumber(int number) {
   return nums[number - 1];
 }
 char *parseEnhancedNumber(int number) {
-  char *nums[] = {"_",   "twen",  "third", "four", "fift",
+  char *nums[] = {"_",   "twen",  "third", "four", "fif",
                   "six", "seven", "eight", "nine"};
   return nums[number - 1];
 }
